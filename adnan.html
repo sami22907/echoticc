@@ -298,6 +298,60 @@
       color: var(--primary);
     }
     
+    /* ===== Gallery Section ===== */
+    .gallery {
+      background-color: var(--secondary);
+    }
+    
+    .gallery-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    .gallery-images img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .gallery-images img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* ===== Modal for Gallery ===== */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      overflow: auto;
+    }
+    
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      margin-top: 50px;
+    }
+    
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
     
     /* ===== Contact Section ===== */
@@ -562,7 +616,65 @@
       <h2 class="section-title">About The Band</h2>
       <p>METAL ERROR is not just a band; we're a revolution. With 8 talented members, we bring the best of metal music to life, blending raw energy with innovation. Formed in Chittagong, we've been shaking the Bangladeshi metal scene with our unique sound and electrifying performances.</p>
       
-      
+      <div class="band-members">
+        <!-- Member 1 -->
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Band Member">
+          <h3>Vocalist</h3>
+          <p>Lead Screams</p>
+        </div>
+        
+        <!-- Member 2 -->
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Band Member">
+          <h3>Lead Guitar</h3>
+          <p>Shred Master</p>
+        </div>
+        
+        <!-- Member 3 -->
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Band Member">
+          <h3>Rhythm Guitar</h3>
+          <p>Power Chords</p>
+        </div>
+        
+        <!-- Member 4 -->
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Band Member">
+          <h3>Bassist</h3>
+          <p>Low End Crusher</p>
+        </div>
+        
+        <!-- Member 5 -->
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Band Member">
+          <h3>Drummer</h3>
+          <p>Blast Beats</p>
+        </div>
+        
+        <!-- Member 6 -->
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Band Member">
+          <h3>Keyboardist</h3>
+          <p>Atmosphere Creator</p>
+        </div>
+        
+        <!-- Member 7 -->
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Band Member">
+          <h3>Backing Vocals</h3>
+          <p>Harmony & Growls</p>
+        </div>
+        
+        <!-- Member 8 -->
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Band Member">
+          <h3>Percussion</h3>
+          <p>Rhythm Keeper</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Events Section -->
   <section id="events" class="section events">
